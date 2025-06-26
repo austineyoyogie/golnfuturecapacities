@@ -1,0 +1,180 @@
+<app-header />
+<ng-container>
+  <div class="main layout-auth-widget">
+    <div class="#"></div>
+    <div class="auth-widget-container">
+      <div class="auth-container--header">
+        <div class="auth-container--header--text">
+          <div class="users_signup">
+            Already have an account? <a href="/login">Sign In</a>
+          </div>
+          <!--          <div class="application&#45;&#45;header-required">-->
+          <!--            <p class="body-secondary">Indication is required.</p>-->
+          <!--          </div>-->
+          <div class="divider"></div>
+          <div class="application--header--title">
+            <h2 class="section-header font-primary">Create your free account!</h2>
+          </div>
+        </div>
+      </div>
+      <form id="application-from" class="application-from " data-discover="true">
+        <div class="application--questions">
+
+          <div class="text-input-wrapper">
+            <div class="input-wrapper txt_field">
+              <input type="text" id="firstName" name="firstName" #firstName="ngModel" ngModel class="input input__single-line validate-required bg-white" aria-label="First Name"
+                     aria-describedby="first_name-description first_name-error first_name-help"
+                     aria-invalid="false" aria-errormessage="firstName-error" aria-required="true"
+                     maxlength="255" autocomplete="given-name" value="" appValidators required [class.is-invalid]="firstName.invalid && (firstName.dirty || firstName.touched)">
+              <label>First Name: <span aria-hidden="true" style="color: black; font-weight: bold;">*</span></label>
+              <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="invalid-feedback">
+                <div *ngIf="firstName.errors?.['required']">This field is required.</div>
+                <div *ngIf="firstName.errors?.['minlength']">This field must have at least 8 character.</div>
+                <div *ngIf="firstName.errors?.['maxlength']">This field must have at most 250 characters.</div>
+                <div *ngIf="!firstName.errors?.['required'] && !firstName.errors?.['minlength'] && !firstName.errors?.['maxlength'] && firstName.errors?.['Validator']">
+                  Invalid first name character format.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-input-wrapper">
+            <div class="input-wrapper txt_field">
+              <input type="text" id="lastName" name="lastName" #lastName="ngModel" ngModel class="input input__single-line validate-required bg-white" aria-label="Last Name"
+                     aria-describedby="lastName-description lastName-error lastName-help"
+                     aria-invalid="false" aria-errormessage="lastName-error" aria-required="true"
+                     maxlength="255" autocomplete="given-name" value="" appValidators required [class.is-invalid]="lastName.invalid && (lastName.dirty || lastName.touched)">
+              <label>Last Name: <span aria-hidden="true" style="color: black; font-weight: bold;">*</span></label>
+              <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="invalid-feedback">
+                <div *ngIf="lastName.errors?.['required']">This field is required.</div>
+                <div *ngIf="lastName.errors?.['minlength']">This field must have at least 8 character.</div>
+                <div *ngIf="lastName.errors?.['maxlength']">This field must have at most 250 characters.</div>
+                <div *ngIf="!lastName.errors?.['required'] && !lastName.errors?.['minlength'] && !lastName.errors?.['maxlength'] && lastName.errors?.['Validator']">
+                  Invalid last name character format.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divide" style="margin-bottom: 50px"></div>
+          <div class="text-input-wrapper">
+            <div class="input-wrapper txt_field">
+              <input type="text" id="email" name="email" #email="ngModel" ngModel class="input input__single-line validate-required bg-white" aria-label="Email"
+                     aria-describedby="first_name-description first_name-error first_name-help"
+                     aria-invalid="false" aria-errormessage="first_name-error" aria-required="true"
+                     maxlength="255" autocomplete="given-name" value="" appValidators required [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
+              <label>Email Address: <span aria-hidden="true" style="color: black; font-weight: bold;">*</span></label>
+              <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+                <div *ngIf="email.errors?.['required']">This field is required.</div>
+                <div *ngIf="email.errors?.['minlength']">This field must have at least 8 character.</div>
+                <div *ngIf="email.errors?.['maxlength']">This field must have at most 250 characters.</div>
+                <div *ngIf="!email.errors?.['required'] && !email.errors?.['minlength'] && !email.errors?.['maxlength'] && email.errors?.['Validator']">
+                  Invalid email character format.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--
+                      <div class="text-input-wrapper">
+                        <div class="input-wrapper txt_field">
+                          <input type="text" id="password" name="password" #password="ngModel" ngModel class="input input__single-line validate-required bg-white" aria-label="Password"
+                                 aria-describedby="password-description password-error first_name-help"
+                                 aria-invalid="false" aria-errormessage="password-error" aria-required="true"
+                                 maxlength="255" autocomplete="given-name" value="" appValidators required [class.is-invalid]="password.invalid && (password.dirty || password.touched)">
+                          <label>Password: <span aria-hidden="true" style="color: black; font-weight: bold;">*</span></label>
+                          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+                            <div *ngIf="password.errors?.['required']">This field is required.</div>
+                            <div *ngIf="password.errors?.['minlength']">This field must have at least 8 character.</div>
+                            <div *ngIf="password.errors?.['maxlength']">This field must have at most 250 characters.</div>
+                            <div *ngIf="!password.errors?.['required'] && !password.errors?.['minlength'] && !password.errors?.['maxlength'] && password.errors?.['Validator']">
+                              Invalid confirm password character format.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row1">
+                          <p style="color: #2691d9; margin-left: 15px;">Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter. </p>
+                        </div>
+                      </div>
+
+                      <div class="text-input-wrapper">
+                        <div class="input-wrapper txt_field">
+                          <input type="text" id="confirmPassword" name="confirmPassword" #confirmPassword="ngModel" ngModel class="input input__single-line validate-required bg-white" aria-label="Password"
+                                 aria-describedby="confirmPassword-description confirmPassword-error first_name-help"
+                                 aria-invalid="false" aria-errormessage="confirmPassword-error" aria-required="true"
+                                 maxlength="255" autocomplete="given-name" value="" appValidators required [class.is-invalid]="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
+                          <label>Confirm Password: <span aria-hidden="true" style="color: black; font-weight: bold;">*</span></label>
+                          <div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="invalid-feedback">
+                            <div *ngIf="confirmPassword.errors?.['required']">This field is required.</div>
+                            <div *ngIf="confirmPassword.errors?.['minlength']">This field must have at least 8 character.</div>
+                            <div *ngIf="confirmPassword.errors?.['maxlength']">This field must have at most 250 characters.</div>
+                            <div *ngIf="!confirmPassword.errors?.['required'] && !confirmPassword.errors?.['minlength'] && !confirmPassword.errors?.['maxlength'] && confirmPassword.errors?.['Validator']">
+                              Invalid confirm password character format.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row1">
+                     </div>
+                     -->
+          <input type="submit" value="Login">
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</ng-container>
+
+
+
+
+<!--
+<form id="application-from" class="application-from " data-discover="true">
+  <div class="application--questions">
+
+    <div class="txt_field">
+      <input type="text" required>
+      <span> </span>
+      <label>Email Address </label>
+    </div>
+
+    <div class="txt_field">
+      <input type="password" required>
+      <span> </span>
+      <label> Password </label>
+    </div>
+
+    <div class="forgot"> Forgot Password </div>
+    <input type="submit" value="Login">
+    <div class="users_signup">
+      Don't have an account? <a href="#">SignUp</a>
+    </div>
+  </div>
+</form>
+</div>
+-->
+
+<!--
+<form id="application-from" class="application-from auth-widget-login" data-discover="true">
+  <div class="application--questions">
+
+    <div class="txt_field">
+      <input type="text" required>
+      <span> </span>
+      <label>Email Address </label>
+    </div>
+
+    <div class="txt_field">
+      <input type="password" required>
+      <span> </span>
+      <label> Password </label>
+    </div>
+
+    <div class="forgot"> Forgot Password </div>
+    <input type="submit" value="Login">
+    <div class="users_signup">
+      Don't have an account? <a href="#">SignUp</a>
+    </div>
+  </div>
+</form>
+-->
+<app-footer />

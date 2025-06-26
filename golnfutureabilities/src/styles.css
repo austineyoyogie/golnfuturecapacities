@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
+/*@import "assets/css/_header-templates.css";*/
+/*@import "assets/css/_header.css";*/
+/*@import "assets/css/_mobile-navigation.css";*/
+/*@import "assets/css/main.css";*/
+/*@import "assets/css/_login.css";*/
+/*@import "assets/css/_register.css";*/
+/*@import "assets/css/_adminstrator.css";*/
+/*@import "assets/css/_footer.css";*/
+/*@import "assets/css/_footer-bottom.css";*/
+
+#togglePassword {
+  float: right;
+  margin-left: -25px;
+  margin-top: -35px;
+  right: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+
+

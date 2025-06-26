@@ -1,0 +1,135 @@
+<header class="navbar navbar-expand-md bg-white sticky-top border-bottom" data-bs-theme="white" style="background-color: #e3f2fd;">
+  <nav class="container-xl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <a class="navbar-brand d-md-none" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-text-indent-right" viewBox="0 0 16 16">
+        <path d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m10.646 2.146a.5.5 0 0 1 .708.708L11.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708zM2 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+      </svg>
+      Aperture
+    </a>
+    <a class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+    <div id="offcanvas" class="offcanvas offcanvas-end" tabindex="1" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasLabel" class="offcanvas-title">Aperture</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-0 mb-lg-0 list-unstyled">
+          <li class="nav-item col-lg-auto"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item col-lg-auto"><a class="nav-link me-2" aria-disabled="false"> Disabled</a></li>
+          <li class="nav-item col-lg-auto"><a class="nav-link me-2" href="#">Disabled</a></li>
+          <li class="nav-item col-lg-auto"><a class="nav-link me-2" aria-disabled="false"> Disabled</a></li>
+        </ul>
+
+        <form class="d-flex align-items-center" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-sm btn-outline-secondary me-2" type="submit">Search</button>
+        </form>
+
+        <ul class="navbar-nav  mb-0 mb-lg-0 list-unstyled">
+          <li class="nav-item col-lg-auto"><a class="nav-link me-2" [routerLink]="['/login']">Sign in</a></li>
+          <li class="nav-item col-lg-auto"><a class="nav-link active" aria-current="page" [routerLink]="['/register']">Sign up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!--
+<div id="mobile-nav" class="nav-container">
+  <div class="nav-logo">
+    <a href="#"><img src="#" alt="" />Home</a>
+  </div>
+
+  <i class="fa-solid fa-bars open-menu"></i>
+  <div class="background"></div>
+
+  <div class="nav-links-container" aria-label="navigation" data-cel-widget="navigation-mobile-navbar">
+    <i class="fa-solid fa-xmark close-menu"></i>
+
+    <ul class="nav-links">
+      <li class="nav-link-item dropdown-menu-branch">
+        <a href="#" data-toggle="dropdown-menu">Builder  <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-menu-items"><a href="#">Builder Sub Menu 1</a></li>
+          <li class="dropdown-menu-items"><a href="#">Builder Sub Menu 2</a></li>
+          <li class="dropdown-menu-items"><a href="#">Builder Sub Menu 3</a></li>
+          <li class="dropdown-menu-items"><a href="#">Builder Sub Menu 4</a></li>
+        </ul>
+      </li>
+      <li class="nav-link-item"><a href="#">Explorer</a></li>
+      <li class="nav-link-item dropdown-menu-branch">
+        <a href="#" data-toggle="dropdown-menu">Marketplace <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-menu-items"><a href="#">Marketplace Sub Menu 1</a></li>
+          <li class="dropdown-menu-items"><a href="#">Marketplace Sub Menu 2</a></li>
+          <li class="dropdown-menu-items"><a href="#">Marketplace Sub Menu 3</a></li>
+          <li class="dropdown-menu-items"><a href="#">Builder Sub Menu 4</a></li>
+        </ul>
+      </li>
+      <li class="nav-link-item"><a href="#">Business Plan</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="siteHeader">
+  <header class="site-header__navigation clearfix" role="banner" aria-label="navigation">
+    <div class="top-header__navigation" role="presentation" aria-label="navigation" data-cel-widget="navigation-desktop-navbar">
+      <div class="top-navigation__menu">
+        <div class="navigation-menu-left__content">
+          <ul class="content-menu__list">
+            <li class="menu-list__item"><a [routerLink]="['/']">Route to Home</a></li>
+            <li class="menu-list__item"><a [routerLink]="['/']">Route to Home</a></li>
+          </ul>
+        </div>
+        <div class="navigation-menu-middle__content">
+          <div id="nav-search">
+            <div class="nav-bar-left">
+              <form id="nav-search-bar-form" class="nav-searchbar nav-progressive-attribute">
+                 <input name="" id="nav-search-submit-button" class="nav-input" type="text" value="Go" tabindex="0">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="navigation-menu-right__content">
+          <ul class="content-menu__list">
+            <li class="menu-list__item"><a [routerLink]="['/register']">Route SignUp</a></li>
+            <li class="menu-list__item"><a [routerLink]="['/login']">Route SignIn</a></li>
+            <li class="menu-list__item"><a [routerLink]="['/profile']">Route Profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-header__navigation" role="presentation" aria-label="navigation" data-cel-widget="navigation-desktop-navbar">
+      <div class="wrapperContainer">
+        <nav class="bottom-navigation__menu">
+          <div class="navigation-menu-left__content">
+            <ul class="content-menu__list">
+              <li class="menu-list__item"><a [routerLink]="['/register']">Route SignUp</a></li>
+              <li class="menu-list__item"><a [routerLink]="['/login']">Route SignIn</a></li>
+              <li class="menu-list__item"><a [routerLink]="['/profile']">Route Profile</a></li>
+            </ul>
+          </div>
+          <div class="navigation-menu-middle__content">
+            <ul class="content-menu__list">
+              <li class="menu-list__item"></li>
+              <li class="menu-list__item"></li>
+              <li class="menu-list__item"></li>
+              <li class="menu-list__item"></li>
+            </ul>
+          </div>
+          <div class="navigation-menu-right__content">
+            <ul class="content-menu__list">
+              <li class="menu-list__item"><a [routerLink]="['/profile']"></a></li>
+              <li class="menu-list__item"><a [routerLink]="['/profile']">Route Profile</a></li>
+              <li class="eGbwE"><a [routerLink]="['/management']">Sign Up</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div>
+-->
